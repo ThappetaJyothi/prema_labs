@@ -1,8 +1,9 @@
 package lab3_q4;
 
 import java.util.Arrays;
+
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.*;
   
     public class Question4 {
     	     
@@ -22,14 +23,18 @@ import java.util.ArrayList;
     	}
     	public static void modifyArray(int[] a) {
     		Arrays.sort(a);
+    		int j=a.length-1;
     		int[] b=new int[a.length];
-    		for(int i=a.length-1;i>=0;i--) {
-    			b[i]=a[i];
+    		for(int i=0;i<a.length;i++) {
+    			b[j]=a[i];
+    			j--;
     		}
-    		
-    		
-    	 System.out.println(Arrays.toString(b));;
+    		System.out.println(Arrays.toString(b));
+    		HashSet<Integer> obj=new HashSet<>();
+    		for(int i=0;i<b.length;i++) {
+    			obj.add(b[i]);
+    		}
+    		System.out.println(obj);
     	}
-    	
 	
 }
